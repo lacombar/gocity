@@ -27,7 +27,9 @@ func (fetcher) packageFound(name string) bool {
 }
 
 func (f *fetcher) Fetch(name string) error {
-	gitAddress := fmt.Sprintf("https://%s", name)
+	gitAddress := "https://"
+	gitAddress += "<your-api-key>"
+	gitAddress += name
 	folder := fmt.Sprintf("%s/src/%s", os.Getenv("GOPATH"), name)
 
 	_, err := git.PlainClone(folder, false, &git.CloneOptions{
