@@ -4,7 +4,7 @@ import (
 	"go/ast"
 	"go/token"
 
-	"github.com/rodrigo-brito/gocity/utils"
+	"gocity/utils"
 )
 
 type NodeInfo struct {

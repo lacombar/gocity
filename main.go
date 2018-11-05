@@ -5,12 +5,12 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rodrigo-brito/gocity/handle/middlewares"
+	"gocity/handle/middlewares"
 
-	"github.com/rodrigo-brito/gocity/handle"
+	"gocity/handle"
 
 	"github.com/go-chi/chi"
-	"github.com/rodrigo-brito/gocity/lib"
+	"gocity/lib"
 )
 
 func main() {

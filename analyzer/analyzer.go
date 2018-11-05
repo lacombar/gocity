@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/rodrigo-brito/gocity/utils"
+	"gocity/utils"
 
-	"github.com/rodrigo-brito/gocity/lib"
+	"gocity/lib"
 )
 
 type Analyzer interface {

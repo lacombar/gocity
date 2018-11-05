@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/rodrigo-brito/gocity/utils"
+	"gocity/utils"
 
-	"github.com/rodrigo-brito/gocity/analyzer"
-	"github.com/rodrigo-brito/gocity/lib"
-	"github.com/rodrigo-brito/gocity/model"
+	"gocity/analyzer"
+	"gocity/lib"
+	"gocity/model"
 )
 
 type AnalyzerHandle struct {
