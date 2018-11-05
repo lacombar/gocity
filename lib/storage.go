@@ -84,3 +84,29 @@ func (g *GCS) Save(projectName string, content []byte) error {
 func (g *GCS) Delete(projectName string) error {
 	return nil
 }
+
+type MemoryStorage struct {
+	Map map [string][]byte
+}
+
+func NewMemoryStorage() (storage Storage, err error) {
+	storage = &MemoryStorage{
+		Map: make(map[string][]byte),
+	}
+	return
+}
+
+func (ms *MemoryStorage) Get(name string) (ok bool, content []byte, err error) {
+	content, ok = ms.Map[name]
+	return
+}
+
+func (ms *MemoryStorage) Save(name string, content []byte) (err error) {
+	ms.Map[name] = content
+	return
+}
+
+func (ms *MemoryStorage) Delete(name string) (err error) {
+	delete(ms.Map, name)
+	return
+}

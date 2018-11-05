@@ -18,7 +18,10 @@ func main() {
 	cache := lib.NewCache()
 	storage, err := lib.NewGCS(context.Background())
 	if err != nil {
-		log.Fatal(err)
+		storage, err = lib.NewMemoryStorage()
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	corsMiddleware := middlewares.GetCors("*")
